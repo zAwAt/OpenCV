@@ -1,5 +1,8 @@
 import numpy
 import cv2
+#main_process関数内の「image_name」に指定した画像に対してガウシアンぼかしをかける為のプログラム。出力はグレースケールのみ。
+#デフォルトでは3x3のフィルタが適用される設定になっているが、kernel_creater関数呼び出し時に第二引数にFalseを指定してあげると自分好みのサイズのフィルタ
+#を適用できる。その際第一引数の値は奇数にすること。
 
 def To_GRGB(image,RGB_bool=False):
     if RGB_bool==True:
