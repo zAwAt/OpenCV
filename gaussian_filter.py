@@ -50,7 +50,7 @@ def kernel_creater(size,default_bool=False):
     return kernel
 
 def main_process():
-    image_name="MITSUBISHI_PAJERO.jpg"
+    image_name="INPUT IMAGE NAME WITH　FILE EXTENSION"
     image=cv2.imread(image_name)
 
     CONVERTED=To_GRGB(image)
