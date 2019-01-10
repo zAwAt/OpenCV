@@ -50,7 +50,7 @@ def kernel_creater(size,default_bool=False):
     return kernel
 
 def main_process():
-    image_name=os.path.joim("hoge","hoge.png")
+    image_name=os.path.join("hoge","hoge.png")
     image=cv2.imread(image_name)
 
     CONVERTED=To_GRGB(image)
