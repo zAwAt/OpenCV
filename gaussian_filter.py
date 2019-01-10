@@ -1,8 +1,5 @@
 import numpy
-import cv2
-#main_process関数内の「image_name」に指定した画像に対してガウシアンぼかしをかける為のプログラム。出力はグレースケールのみ。
-#デフォルトでは3x3のフィルタが適用される設定になっているが、kernel_creater関数呼び出し時に第二引数にFalseを指定してあげると自分好みのサイズのフィルタ
-#を適用できる。その際第一引数の値は奇数にすること。
+import cv2,os
 
 def To_GRGB(image,RGB_bool=False):
     if RGB_bool==True:
@@ -53,7 +50,7 @@ def kernel_creater(size,default_bool=False):
     return kernel
 
 def main_process():
-    image_name="INPUT IMAGE NAME WITH　FILE EXTENSION"
+    image_name=os.path.joim("hoge","hoge.png")
     image=cv2.imread(image_name)
 
     CONVERTED=To_GRGB(image)
